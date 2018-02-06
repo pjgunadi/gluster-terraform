@@ -47,7 +47,7 @@ resource "null_resource" "create_heketi" {
   }
 
   provisioner "file" {
-    content = file("${path.module}/scripts/createheketi.sh")
+    source = "${path.module}/scripts/createheketi.sh"
     destination = "/tmp/createheketi.sh"
   }
 

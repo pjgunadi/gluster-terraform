@@ -1,3 +1,3 @@
 output "heketi_url" {
-  value = "http://${var.heketi_ip}:8080"
+  value = "http://${element(vsphere_virtual_machine.gluster.*.default_ip_address, 0)}:8080"
 }
